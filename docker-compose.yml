@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  base-bdd:
+    build: ./database
+    image: base.bdd
+    container_name: mysql-bdd
+    ports:
+      - "9000:8080"
+    networks:
+      - weather-network
